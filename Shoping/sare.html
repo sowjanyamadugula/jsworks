@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container{
+      margin-top: 5%;
+    }
+    #max-min{
+      margin-top: 2%;
+      margin-left: 12%;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="row mb-3" id="max-min">
+    <div class="col-md-4">
+        <input type="number" id="minPrice" class="form-control" placeholder="Min Price">
+    </div>
+    <div class="col-md-4">
+        <input type="number" id="maxPrice" class="form-control" placeholder="Max Price">
+    </div>
+    <div class="col-md-4">
+        <button id="filterButton" class="btn btn-primary">Filter</button>
+    </div>
+</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 product-item" data-price="3000">
+                <div class="thumbnail">
+                    <a href="images/saree1.jpg" target="_blank">
+                      <img src="images/saree1.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Pattu Saree</p>
+                        <p> Price : 3000</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item"data-price="1000">
+                <div class="thumbnail">
+                    <a href="images/sare2.jpg" target="_blank">
+                      <img src="images/sare2.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Nylon Saree</p>
+                        <p> Price : 1000</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="900">
+                <div class="thumbnail">
+                    <a href="images/sare3.jpg" target="_blank">
+                      <img src="images/sare3.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                      <p>Brand : Silk Saree</p>
+                      <p>Price : 900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="700">
+                <div class="thumbnail">
+                    <a href="images/sare4.jpg" target="_blank">
+                      <img src="images/sare4.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Fancy Saree</p>
+                        <p>Price : 700</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="900">
+                <div class="thumbnail">
+                    <a href="images/sare5.jpg" target="_blank">
+                      <img src="images/sare5.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1800">
+                <div class="thumbnail">
+                    <a href="images/sare6.jpeg" target="_blank">
+                      <img src="images/sare6.jpeg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Pattu Saree</p>
+                      <p>Price : 1800</p>
+                      </div>
+                    </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 product-item" data-price="800">
+                <div class="thumbnail">
+                    <a href="images/sare7.jpg" target="_blank">
+                      <img src="images/sare7.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 800</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="900">
+                <div class="thumbnail">
+                    <a href="images/sare8.jpg" target="_blank">
+                      <img src="images/sare8.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1900">
+                <div class="thumbnail">
+                    <a href="images/sare9.jpg" target="_blank">
+                      <img src="images/sare9.jpg" alt="Lights" width="100%" style="height:220px" >
+                      <div class="caption">
+                        <p>Brand : Pattu Saree</p>
+                      <p>Price : 1900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="2000">
+                <div class="thumbnail">
+                    <a href="images/sare10.jpg" target="_blank">
+                      <img src="images/sare10.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p> Brand : Pattu Saree</p>
+                      <p>Price : 2000</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1600">
+                <div class="thumbnail">
+                    <a href="images/sare11.jpg" target="_blank">
+                      <img src="images/sare11.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p> Brand : Silk Saree</p>
+                      <p> Price : 1600</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1500">
+                <div class="thumbnail">
+                    <a href="images/sare12.jpg" target="_blank">
+                      <img src="images/sare12.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand:NylonSilkSaree</p>
+                        <p>Price : 1500</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 product-item" data-price="2500">
+                <div class="thumbnail">
+                    <a href="images/sare13.jpg" target="_blank">
+                      <img src="images/sare13.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Pattu Saree</p>
+                      <p>2500</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1900">
+                <div class="thumbnail">
+                    <a href="images/sare14.jpg" target="_blank">
+                      <img src="images/sare14.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : pattu Saree</p>
+                      <p>1900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1700">
+                <div class="thumbnail">
+                    <a href="images/sare7.jpg" target="_blank">
+                      <img src="images/sare7.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 1700</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="850">
+                <div class="thumbnail">
+                    <a href="images/sare16.jpg" target="_blank">
+                      <img src="images/sare16.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : pattu Saree</p>
+                        <p>Price : 850</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1600">
+                <div class="thumbnail">
+                    <a href="images/sare17.jpg" target="_blank">
+                      <img src="images/sare17.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand:Banaras Saree</p>
+                      <p>Price : 1600</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="600">
+                <div class="thumbnail">
+                    <a href="images/sare18.jpg" target="_blank">
+                      <img src="images/sare18.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 600</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 product-item" data-price="1700">
+                <div class="thumbnail">
+                    <a href="images/saree1.jpg" target="_blank">
+                      <img src="images/saree1.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : pattu Saree</p>
+                      <p>Price : 1700</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="950">
+                <div class="thumbnail">
+                    <a href="images/sare2.jpg" target="_blank">
+                      <img src="images/sare2.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 950</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1050">
+                <div class="thumbnail">
+                    <a href="images/sare3.jpg" target="_blank">
+                      <img src="images/sare3.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 1050</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="550">
+                <div class="thumbnail">
+                    <a href="images/sare4.jpg" target="_blank">
+                      <img src="images/sare4.jpg" alt="Lights" width="100%" height="300px" >
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 550</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="900">
+                <div class="thumbnail">
+                    <a href="images/sare5.jpg" target="_blank">
+                      <img src="images/sare5.jpg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand : Silk Saree</p>
+                      <p>Price : 900</p>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="col-md-2 product-item" data-price="1300">
+                <div class="thumbnail">
+                    <a href="images/sare6.jpeg" target="_blank">
+                      <img src="images/sare6.jpeg" alt="Lights" width="100%" height="300px">
+                      <div class="caption">
+                        <p>Brand:Banaras Saree</p>
+                      <p>Price : 1300</p>
+                      </div>
+                    </a>
+            </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-2 product-item" data-price="750">
+              <div class="thumbnail">
+                  <a href="images/sare7.jpg" target="_blank">
+                    <img src="images/sare7.jpg" alt="Lights" width="100%" height="300px" >
+                    <div class="caption">
+                      <p>Brand : Silk Saree</p>
+                      <p>Price : 750</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+          <div class="col-md-2 product-item" data-price="700">
+              <div class="thumbnail">
+                  <a href="images/sare8.jpg" target="_blank">
+                    <img src="images/sare8.jpg" alt="Lights" width="100%" height="300px" >
+                    <div class="caption">
+                      <p>Brand : Silk Saree</p>
+                      <p>Price : 700</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+          <div class="col-md-2 product-item" data-price="900">
+              <div class="thumbnail">
+                  <a href="images/sare9.jpg" target="_blank">
+                    <img src="images/sare9.jpg" alt="Lights" width="100%"style="height:200px">
+                    <div class="caption">
+                      <p>Brand : Silk Saree</p>
+                      <p>Price : 900</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+          <div class="col-md-2 product-item" data-price="1800">
+              <div class="thumbnail">
+                  <a href="images/sare10.jpg" target="_blank">
+                    <img src="images/sare10.jpg" alt="Lights" width="100%" height="300px" >
+                    <div class="caption">
+                      <p>Brand : Pattu Saree</p>
+                      <p>Price : 1800</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+          <div class="col-md-2 product-item" data-price="1200">
+              <div class="thumbnail">
+                  <a href="images/sare11.jpg" target="_blank">
+                    <img src="images/sare11.jpg" alt="Lights" width="100%" height="300px" >
+                    <div class="caption">
+                      <p>Brand : Silk Saree</p>
+                      <p>Price : 1200</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+          <div class="col-md-2 product-item" data-price="1400">
+              <div class="thumbnail">
+                  <a href="images/sare12.jpg" target="_blank">
+                    <img src="images/sare12.jpg" alt="Lights" width="100%" height="300px" >
+                    <div class="caption">
+                      <p>Brand:NylonSilkSaree</p>
+                      <p>Price : 1400</p>
+                    </div>
+                  </a>
+                </div>
+          </div>
+      </div>
+      <div id="noResults" class="no-results" style="display: none;">
+        Items not available
+</div>
+    </div>
+    <script>
+        
+      document.getElementById('filterButton').addEventListener('click', function() {
+          // Get the input values
+          const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+          const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+          
+          // Get all product items
+          const productItems = document.querySelectorAll('.product-item');
+          let itemsFound = false;
+
+          // Loop through each item and show/hide based on price
+          productItems.forEach(item => {
+              const price = parseFloat(item.getAttribute('data-price'));
+              if (price >= minPrice && price <= maxPrice) {
+                  item.style.display = ''; // Show item
+                  itemsFound = true;
+              } else {
+                  item.style.display = 'none'; // Hide item
+              }
+          });
+          const noResultsMessage = document.getElementById('noResults');
+          if (itemsFound) {
+              noResultsMessage.style.display = 'none';
+          } else {
+              noResultsMessage.style.display = 'block';
+          }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Amount</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="credit-debit">
+        <h2 style="color: gray; padding-top:30px; padding-left:40px; font-size:35px;">Credit Amount</h2>
+        <div class="input-field">
+            <input style="background-color: rgb(218, 199, 199); height:25px; border:none; color:whitesmoke;" type="number" 
+                placeholder="Enter the amount" id="credit-amount">
+            <button onclick="addAmount()" class="bt">Submit</button>
+        </div>
+        <div style="padding-left: 28px; padding-top:28px;">
+            <button onclick="accountdetails()" class="btn">Account Details</button>
+            <button onclick="debitdetails()" class="btn">Debit Account</button>
+        </div>
+    </div>
+    <script>
+        function addAmount() {
+            const amount = parseFloat(document.getElementById("credit-amount").value.trim());
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount greater than zero.");
+                return;
+            }
+
+            
+            let currentBalance = parseFloat(localStorage.getItem("accountBalance")) || 50000;
+            currentBalance += amount;
+            localStorage.setItem("accountBalance", currentBalance);
+
+            alert(`Amount added successfully! Remaining balance: $${currentBalance.toFixed(2)}`);
+            document.getElementById("credit-amount").value = ""; 
+        }
+        
+        function accountdetails() {
+        
+            var result = confirm("Are you sure?");
+
+            
+            if (result) {
+                alert("You clicked Yes!");
+                
+            } else {
+                alert("You clicked No!");
+            
+            }
+        }
+
+        const pin4 = "1234";
+        function accountdetails() {
+            var result = confirm("Are you sure?");
+            if (result) {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin4 === userpin) {
+                    window.location.href = 'account.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+    }
+        
+
+        const pin5 = "1234";
+        function debitdetails() {
+            var result = confirm("Are you sure?");
+            if (result) {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin5 === userpin) {
+                    window.location.href = 'debit.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>

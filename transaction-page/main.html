@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction details</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<script>
+    const correctpin = "1234";
+    function accessdetails(){
+        const userpin=document.getElementById("pin").value.trim();
+         if(userpin === ""){
+            alert("please enter the pin ,the pin is cannot be empty");
+          }
+       else if(correctpin=== userpin){
+        document.getElementById("transaction").style.display="block";
+            document.getElementById("account").style.display="block";
+            document.getElementById("credit").style.display="block";
+            document.getElementById("debit").style.display="block";
+             }
+          else{
+             alert("please enter correct pin");
+         }
+         }
+       
+
+    const pin="1234";
+    function accountdetails(){
+        while(true){
+            const userpin=prompt("enter the pin").trim();
+              if(userpin === ""){
+                  alert("please enter the pin ,the pin is cannot be empty");   
+                   }
+                 else if(pin === userpin)
+                  {
+                  window.location.href='account.html';
+                    break;
+                      }
+                     else{
+                   alert("incorrect pin");
+               }
+           }
+        }
+        
+    const pin1="1234";
+    function creditdetails(){
+      while(true){
+        const userpin=prompt("enter the pin").trim();
+        if(userpin === ""){
+            alert("please enter the pin ,the pin is cannot be empty");  
+        }
+          else if(pin1 === userpin)
+        {
+            window.location.href='credit.html';
+            break;
+        }
+        else{
+            alert("incorrect pin");
+        }
+    }
+      }
+    
+      const pin2="1234"
+    function debitdetails(){
+        while(true){
+        const userpin=prompt("enter the pin").trim();
+         if(userpin === ""){
+                alert("please enter the pin ,the pin is cannot be empty");  
+            }
+           else if(pin2 === userpin)
+            {
+            window.location.href='debit.html';
+            break;
+            }
+            else{
+                alert("incorrect pin");
+            }
+        }
+       }
+    
+       
+</script>
+<body>
+   <div>
+    <h1>Bank-Details</h1>
+   <label for="pinInput">Enter PIN:</label>
+   <input type="password" id="pin" maxlength="4">
+   <button onclick="accessdetails()">Submit</button>
+   </div>      
+  <div class="div">
+   <div  id="transaction" class="trans"> <h1 style="margin-top:2px;">TRANSACTION DETAILS</h1></div>
+    <div id="account" class="box account">
+        <h2 style="margin-top:60px; margin-left:15px;"> Account Details</h2>
+        <button onclick="accountdetails()" style="margin-top: 20px; margin-left:40px; background-color:gray;
+        color:whitesmoke; border:none;padding-top:10px; padding-left:10px;
+        padding-bottom:10px;padding-right:10px; border-radius:5px" >Check Details</button>  
+           </div>
+           <div  id="credit" class="box credit">
+            <h2 style="margin-top:60px; margin-left:20px;">Credit Details</h2>
+            <button onclick="creditdetails()" style="margin-top: 20px; margin-left:40px; background-color:gray;
+            color:whitesmoke; border:none;padding-top:10px; padding-left:10px;
+            padding-bottom:10px;padding-right:10px; border-radius:5px">Credit Amount</button>  
+           </div>
+           <div  id="debit" class="box debit">
+            <h2 style="margin-top:60px; margin-left:25px;">Debit Details</h2>
+            <button onclick="debitdetails()" style="margin-top: 20px; margin-left:40px; background-color:gray;
+            color:whitesmoke; border:none; padding-top:10px; padding-left:10px;
+            padding-bottom:10px;padding-right:10px; border-radius:5px"> Debit Amount</button>  
+           </div>
+  </div>
+</body>
+</html>

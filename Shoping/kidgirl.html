@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    .container{
+      margin-top: 5%;
+    }
+    #max-min{
+      margin-top: 2%;
+      margin-left: 12%;
+    }
+  </style>
+</head>
+<body>
+    <div class="row mb-3" id="max-min">
+        <div class="col-md-4">
+            <input type="number" id="minPrice" class="form-control" placeholder="Min Price">
+        </div>
+        <div class="col-md-4">
+            <input type="number" id="maxPrice" class="form-control" placeholder="Max Price">
+        </div>
+        <div class="col-md-4">
+            <button id="filterButton" class="btn btn-primary">Filter</button>
+        </div>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 product-item" data-price="500">
+                    <div class="thumbnail">
+                        <a href="images/girl2.avif" target="_blank">
+                          <img src="images/girl2.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand : Flare Dress</p>
+                            <p> Price : 500</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item"data-price="700">
+                    <div class="thumbnail">
+                        <a href="images/girl3.avif" target="_blank">
+                          <img src="images/girl3.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand : Dot Fit</p>
+                            <p> Price : 700</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="900">
+                    <div class="thumbnail">
+                        <a href="images/girl4.avif" target="_blank">
+                          <img src="images/girl4.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                          <p>Brand : Stirped Fit</p>
+                          <p>Price : 900</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="400">
+                    <div class="thumbnail">
+                        <a href="images/girl5.avif" target="_blank">
+                          <img src="images/girl5.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand :Embroidered fit</p>
+                            <p>Price : 400</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1500">
+                    <div class="thumbnail">
+                        <a href="images/girl6.avif" target="_blank">
+                          <img src="images/girl6.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand : checkedPattu Fit</p>
+                          <p>Price :1500</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1200">
+                    <div class="thumbnail">
+                        <a href="images/girl7.avif" target="_blank">
+                          <img src="images/girl7.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand :Pink netFrock</p>
+                          <p>Price : 1200</p>
+                          </div>
+                        </a>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 product-item" data-price="900">
+                    <div class="thumbnail">
+                        <a href="images/girl8.avif" target="_blank">
+                          <img src="images/girl8.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand :GreenRoundfrock</p>
+                          <p>Price : 900</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="900">
+                    <div class="thumbnail">
+                        <a href="images/girl2.avif" target="_blank">
+                          <img src="images/girl2.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand :Flare Dress</p>
+                          <p> Price : 900</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1600">
+                    <div class="thumbnail">
+                        <a href="images/girl9.avif" target="_blank">
+                          <img src="images/girl9.avif" alt="Lights" width="100%" style="height:220px" >
+                          <div class="caption">
+                            <p>Brand :pattu frock</p>
+                          <p>Price : 1600</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1300">
+                    <div class="thumbnail">
+                        <a href="images/girl10.avif" target="_blank">
+                          <img src="images/girl10.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p> Brand :Jumpsuit Frock</p>
+                          <p>Price : 1300</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1200">
+                    <div class="thumbnail">
+                        <a href="images/girl3.avif" target="_blank">
+                          <img src="images/girl3.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p> Brand : dot Fit</p>
+                          <p> Price : 1200</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="700">
+                    <div class="thumbnail">
+                        <a href="images/girl11.avif" target="_blank">
+                          <img src="images/girl11.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand:black Night wear</p>
+                            <p>Price : 700</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 product-item" data-price="1050">
+                    <div class="thumbnail">
+                        <a href="images/girl2.avif" target="_blank">
+                          <img src="images/girl2.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand : frock </p>
+                          <p>1050</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="900">
+                    <div class="thumbnail">
+                        <a href="images/girl12.avif" target="_blank">
+                          <img src="images/girl12.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand :green night wear</p>
+                          <p>900</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1300">
+                    <div class="thumbnail">
+                        <a href="images/girl4.avif" target="_blank">
+                          <img src="images/girl4.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand: Striped fit</p>
+                          <p>Price : 1300</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1500">
+                    <div class="thumbnail">
+                        <a href="images/girl6.avif" target="_blank">
+                          <img src="images/girl6.avif" alt="Lights" width="100%" height="300px">
+                          <div class="caption">
+                            <p>Brand : pattu Frock</p>
+                            <p>Price : 1500</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="1250">
+                    <div class="thumbnail">
+                        <a href="images/girl2.avif" target="_blank">
+                          <img src="images/girl2.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand:banaras frock</p>
+                          <p>Price : 1250</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+                <div class="col-md-2 product-item" data-price="600">
+                    <div class="thumbnail">
+                        <a href="images/girl9.avif" target="_blank">
+                          <img src="images/girl9.avif" alt="Lights" width="100%" height="300px" >
+                          <div class="caption">
+                            <p>Brand : Silk frock</p>
+                          <p>Price : 600</p>
+                          </div>
+                        </a>
+                      </div>
+                </div>
+            </div>
+            
+            
+          </div>
+          <div id="noResults" class="no-results" style="display: none;">
+            Items not available
+    </div>
+        </div>
+        <script>
+            
+          document.getElementById('filterButton').addEventListener('click', function() {
+              // Get the input values
+              const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+              const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+              
+              // Get all product items
+              const productItems = document.querySelectorAll('.product-item');
+              let itemsFound = false;
+    
+              // Loop through each item and show/hide based on price
+              productItems.forEach(item => {
+                  const price = parseFloat(item.getAttribute('data-price'));
+                  if (price >= minPrice && price <= maxPrice) {
+                      item.style.display = ''; // Show item
+                      itemsFound = true;
+                  } else {
+                      item.style.display = 'none'; // Hide item
+                  }
+              });
+              const noResultsMessage = document.getElementById('noResults');
+              if (itemsFound) {
+                  noResultsMessage.style.display = 'none';
+              } else {
+                  noResultsMessage.style.display = 'block';
+              }
+          });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Student-Name</th>
+        <th>Telugu</th>
+        <th>Hindi</th>
+        <th>English</th> 
+        <th>submit</th>
+         <th>Marks and grade</th>
+    </tr>
+<tr>
+    <td><input type="text" placeholder="Name" id="fristname"></td>
+    <td><input type="number" placeholder="Telugu" id="telmarks"></td>
+    <td><input type="number" placeholder="hindi" id="hinmarks"></td>
+    <td> <input type="number" placeholder="english" id="engmarks" size="3px"></td>
+    <td><button onclick="studentgrade()">submit</button></td>
+    <td><div id="stud1"></div></td>
+
+   
+</tr>
+<tr>
+    <td><input type="text" placeholder="Name" id="fristname"></td>
+    <td><input type="number" placeholder="Telugu" id="tmarks"></td>
+    <td><input type="number" placeholder="hindi" id="hmarks"></td>
+    <td> <input type="number" placeholder="english" id="emarks"></td>
+   <td> <button onclick=" studentgrade1()">submit</button></td>
+   <td><div id="stud2"></div></td>
+</tr>
+<tr>
+    <td><input type="text" placeholder="Name" id="fristname"></td>
+    <td><input type="number" placeholder="Telugu" id="ts"></td>
+    <td><input type="number" placeholder="hindi" id="hs"></td>
+    <td> <input type="number" placeholder="english" id="es"></td>
+    <td> <button onclick=" studentgrade2()">submit</button></td>
+    <td><div id="stud3"></div></td>
+</tr>
+</table>
+ <script>
+    function studentgrade(){
+
+       
+      let t=document.getElementById("telmarks").value;
+      let h=document.getElementById("hinmarks").value;
+      
+      let e= document.getElementById("engmarks").value;
+     let tm=parseInt(t);
+     let hm=parseInt(h);
+     let em=parseInt(e);
+     let subfail;
+     let totalmarks=((tm)+(hm)+(em));
+     if(((tm>=35)&&(tm<=100))&& ((hm>=35)&&(hm<=100))&&((em>=35)&&(em<=100))){
+         subfail ="0";
+     }
+     else if((tm<35)&&(hm<35)&&(em<35)){
+         subfail=" T & H & E";
+     }
+     else if((tm<35)&&(hm<35)&&(em>=35)){
+        subfail="T & H"; 
+        }
+        else if((tm<35)&&(hm>=35)&&(em<35)){
+             subfail="T & E";
+        }
+        else if((tm>=35)&&(hm<35)&&(em<35)){
+            subfail="H & E";
+        }
+        else if((tm<35)&&(hm>=35)&&(em>=35)){
+             subfail="T";
+        }
+        else if((tm>=35)&&(hm<35)&&(em>=35)){
+             subfail="H";
+        }
+        else if((tm>=35)&&(h>=35)&&(em<35)){
+             subfail="E";
+        }
+        let grade;
+        if((totalmarks>=270)&&(totalmarks<=300)){
+            grade="A"
+        }
+        else if((totalmarks>=230)&&(totalmarks<270))
+        {
+            grade="B";
+        }
+        else if((totalmarks>=180)&&(totalmarks<230)){
+            grade="c";
+        }
+        else if((totalmarks>=150)&&(totalmarks<180)){
+            grade="D";
+        }
+        else{
+            grade="E";
+        }
+        document.getElementById("stud1").innerHTML=`totalmarks : ${totalmarks} , grade:${grade} ,subjects-failed:${subfail}`;
+       
+        }
+        function studentgrade1(){
+
+       
+            let t=document.getElementById("tmarks").value;
+            let h=document.getElementById("hmarks").value;
+            
+            let e= document.getElementById("emarks").value;
+           let tm=parseInt(t);
+           let hm=parseInt(h);
+           let em=parseInt(e);
+           let subfail;
+           let totalmarks=((tm)+(hm)+(em));
+           if(((tm>=35)&&(tm<=100))&& ((hm>=35)&&(hm<=100))&&((em>=35)&&(em<=100))){
+               subfail ="0";
+           }
+           else if((tm<35)&&(hm<35)&&(em<35)){
+               subfail=" T & H & E";
+           }
+           else if((tm<35)&&(hm<35)&&(em>=35)){
+              subfail="T & H"; 
+              }
+              else if((tm<35)&&(hm>=35)&&(em<35)){
+                   subfail="T & E";
+              }
+              else if((tm>=35)&&(hm<35)&&(em<35)){
+                  subfail="H & E";
+              }
+              else if((tm<35)&&(hm>=35)&&(em>=35)){
+                   subfail="T";
+              }
+              else if((tm>=35)&&(hm<35)&&(em>=35)){
+                   subfail="H";
+              }
+              else if((tm>=35)&&(h>=35)&&(em<35)){
+                   subfail="E";
+              }
+              let grade;
+              if((totalmarks>=270)&&(totalmarks<=300)){
+                  grade="A"
+              }
+              else if((totalmarks>=230)&&(totalmarks<270))
+              {
+                  grade="B";
+              }
+              else if((totalmarks>=180)&&(totalmarks<230)){
+                  grade="c";
+              }
+              else if((totalmarks>=150)&&(totalmarks<180)){
+                  grade="D";
+              }
+              else{
+                  grade="E";
+              }
+              document.getElementById("stud2").innerHTML=`totalmarks :  ${totalmarks} , grade:${grade} ,subjects-failed: ${subfail}`;
+             
+              }
+              function studentgrade2(){
+
+       
+                let t=document.getElementById("ts").value;
+                let h=document.getElementById("hs").value;
+                
+                let e= document.getElementById("es").value;
+               let tm=parseInt(t);
+               let hm=parseInt(h);
+               let em=parseInt(e);
+               let subfail;
+               let totalmarks=((tm)+(hm)+(em));
+               if(((tm>=35)&&(tm<=100))&& ((hm>=35)&&(hm<=100))&&((em>=35)&&(em<=100))){
+                   subfail ="0";
+               }
+               else if((tm<35)&&(hm<35)&&(em<35)){
+                   subfail=" T & H & E";
+               }
+               else if((tm<35)&&(hm<35)&&(em>=35)){
+                  subfail="T & H"; 
+                  }
+                  else if((tm<35)&&(hm>=35)&&(em<35)){
+                       subfail="T & E";
+                  }
+                  else if((tm>=35)&&(hm<35)&&(em<35)){
+                      subfail="H & E";
+                  }
+                  else if((tm<35)&&(hm>=35)&&(em>=35)){
+                       subfail="T";
+                  }
+                  else if((tm>=35)&&(hm<35)&&(em>=35)){
+                       subfail="H";
+                  }
+                  else if((tm>=35)&&(h>=35)&&(em<35)){
+                       subfail="E";
+                  }
+                  let grade;
+                  if((totalmarks>=270)&&(totalmarks<=300)){
+                      grade="A"
+                  }
+                  else if((totalmarks>=230)&&(totalmarks<270))
+                  {
+                      grade="B";
+                  }
+                  else if((totalmarks>=180)&&(totalmarks<230)){
+                      grade="c";
+                  }
+                  else if((totalmarks>=150)&&(totalmarks<180)){
+                      grade="D";
+                  }
+                  else{
+                      grade="E";
+                  }
+                  document.getElementById("stud3").innerHTML=`totalmarks: ${totalmarks} , grade:${grade} ,subjects-failed:${subfail}`;
+                 
+                  }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debit Amount</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="credit-debit">
+        <h2 style="color: gray; padding-top:30px; padding-left:45px; font-size:35px;">Debit Amount</h2>
+        <div class="input-field">
+            <input style="background-color: rgb(218, 199, 199); height:25px; border:none; color:whitesmoke;" type="number" 
+                placeholder="Enter the amount" id="debit-amount">
+            <button onclick="debitAmount()" class="bt">Submit</button>
+        </div>
+        <div style="padding-left: 28px; padding-top:28px;">
+            <button onclick="accountdetails()" class="btn">Account Details</button>
+            <button onclick="creditdetails()" class="btn">Credit Account</button>
+        </div>
+    </div>
+    <script>
+        function debitAmount() {
+            const amount = parseFloat(document.getElementById("debit-amount").value.trim());
+            if (isNaN(amount) || amount <= 0) {
+                alert("Please enter a valid amount greater than zero.");
+                return;
+            }
+
+            
+            let currentBalance = parseFloat(localStorage.getItem("accountBalance")) || 50000;
+            if (amount > currentBalance) {
+                alert("Insufficient balance.");
+                return;
+            }
+            currentBalance -= amount;
+            localStorage.setItem("accountBalance", currentBalance);
+
+            alert(`Amount deducted successfully! Remaining balance: $${currentBalance.toFixed(2)}`);
+            document.getElementById("debit-amount").value = ""; 
+        }
+
+        const pin4 = "1234";
+        function accountdetails() {
+            var result = confirm("Are you sure?");
+            if (result) {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin4 === userpin) {
+                    window.location.href = 'account.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+    }
+
+        const pin5 = "1234";
+        function creditdetails() {
+            var result = confirm("Are you sure?");
+            if (result) {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin5 === userpin) {
+                    window.location.href = 'credit.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+    }
+    </script>
+</body>
+</html>

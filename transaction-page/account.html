@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="act">
+        <h2 style="color:gray; padding-left:60px; padding-top:10px;">ACCOUNT DETAILS</h2>
+        <p class="act1">Account NO: Madugula Sowjanya</p>
+        <p class="act1">PH NUM: 7780564590</p>
+        <p class="act1">BRANCH NAME: Union Bank</p>
+        <p class="act1">Account No: 20199100012345</p>
+        <p class="act1">IFSC Code: UNI567890</p>
+        <p class="act1" id="balance">Amount: Loading...</p>
+        <div style="padding-left: 55px; padding-top:30px;">
+            <button onclick="creditdetails()" class="btn">Credit Amount</button>
+            <button onclick="debitdetails()" class="btn">Debit Account</button>
+        </div>
+    </div>
+    <script>
+        function updateBalance() {
+            const balance = parseFloat(localStorage.getItem("accountBalance")) || 50000;
+            document.getElementById("balance").innerText = "Amount: $" + balance.toFixed(2);
+        }
+
+        updateBalance(); 
+
+        const pin4 = "1234";
+        function creditdetails() {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin4 === userpin) {
+                    window.location.href = 'credit.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+
+        const pin5 = "1234";
+        function debitdetails() {
+            while (true) {
+                const userpin = prompt("Enter the pin").trim();
+                if (userpin === "") {
+                    alert("Please enter the pin. The pin cannot be empty.");
+                } else if (pin5 === userpin) {
+                    window.location.href = 'debit.html';
+                    break;
+                } else {
+                    alert("Incorrect pin.");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
