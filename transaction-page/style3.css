@@ -52,7 +52,7 @@ border-radius: 10px;
 color: white;
 }
 .box {
-    display: none; /* Hide boxes initially */  
+    display: none;   
 }
 .act{
     background-color: darkslategray;
