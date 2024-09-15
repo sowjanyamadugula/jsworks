@@ -2,6 +2,11 @@
     margin: 0px;
     padding: 0px;
 }
+.back-btn {
+    position: fixed;
+    top: 0px;
+    right: 20px;
+}
 #collections{
     margin-top: 5%;
 }
